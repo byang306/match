@@ -14,7 +14,7 @@ export class AppComponent {
     console.log("Got the service!");
   };
   ngOnInit(){
-    this.time = this.http.get<Time>("http://9daa7fda.ngrok.io/api/hello/time",{responseType : "json"}).subscribe(
+    this.time = this.http.get<Time>("https://unambiguous.herokuapp.com/api/hello/time",{responseType : "json"}).subscribe(
       response =>{
         this.time = response.data;
         console.log(this.time);
